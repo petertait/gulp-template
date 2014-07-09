@@ -1,4 +1,4 @@
-# Gulp tempalte
+# Gulp Template
 
 Barebones gulp.js project. Gives you local server, liveReload, Sass, & jshint.
 
