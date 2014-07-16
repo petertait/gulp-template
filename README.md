@@ -1,8 +1,16 @@
-# Gulp Template
+# Website Template
 
-Barebones gulp.js project. Gives you local server, liveReload, Sass, & jshint.
+Barebones gulp.js project. 
 
-### getting started
+### Includes
+* Local server
+* LiveReload
+* Sass
+* Jshint
+* CSS Grid
+* CSS Reset
+
+### Installation
 
 Install [node](http://nodejs.org/) & [gulp](http://gulpjs.com/)
 
@@ -11,6 +19,10 @@ Install [node](http://nodejs.org/) & [gulp](http://gulpjs.com/)
 Install packages
 
 `npm i`
+
+Build assets (only required once)
+
+`gulp build`
 
 Run Gulp
 
