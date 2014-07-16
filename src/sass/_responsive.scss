@@ -2,7 +2,8 @@
 // iPAD STYLES
 //===============================================================================
 @media screen and (max-width: 1000px) {
-	/* ======== Base Styles ======== */
+
+	// BASICS
 	.visible-tablet{
 		display: block!important;
 	}
@@ -12,19 +13,6 @@
 	.hidden-desktop{
 		display: block!important;
 	}
-	
-	.image-block{
-		height: 450px;
-		background-color: #2bacf9;
-		background-position: bottom;
-		background-repeat: no-repeat;
-		background-size: 100%;
-		z-index: -1;
-		
-		&.hidden-desktop{
-			display: none!important;
-		}
-	}
 }
 
 //===============================================================================
@@ -32,7 +20,7 @@
 //===============================================================================
 @media screen and (max-width: 650px) {
 
-	// ==== GRID ==== //
+	// GRID
 	html {
 		font-size: 0.875em;
 		-webkit-text-size-adjust:100%;
@@ -51,11 +39,9 @@
 	}
 	.hidden-desktop{
 		display: block!important;
-		
-		&.image-block{
-			display: block!important;
-		}
 	}
+
+	// BASICS
 	body{
 		font-size: 0.875em;
 	}
@@ -84,77 +70,5 @@
 	  margin-bottom: 10px;
 	  font-size: 16px;
 	}	
-	
-	// Image Blocks
-	.image-block {
-		width: 100%;
-		height: 300px;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		position: relative;
-	}
-
-	.feature-wrap{
-		height: 150px;
-
-		& .feature-img{
-			height: 150px;
-			background-size: cover;
-			background-attachment: scroll;
-		}
-		& .main-logo{
-			margin-left: auto;
-			margin-right: auto;
-			display: table;
-			margin-top: 0;
-			background-position: top 30px center;
-			height: 150px;
-		}
-	}
-	.holding-wrap{
-
-		& h1{
-			font-size: 28px;
-			margin-top: 40px;
-			margin-bottom: 40px;
-		}
-		& h2{
-			padding-top: 50px;
-			margin-bottom: 30px;
-			padding-left: 0;
-			padding-right: 0;
-			font-size: 20px;
-			line-height: 1.3;
-		}
-		& .info-block{
-			text-align: center;
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: 55px;
-
-			&.globe-block, &.users-block, &.share-block, &.info-block{
-				background-position: top;
-				background-size: 45px;
-			}
-			&.users-block{
-				background-size: 60px;
-				background-position: top 10px center;
-			}
-		}
-		& .contact-block{
-			margin-top: 50px;
-			text-align: center;
-
-			& .contact-btn{
-				display: table;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
-	}
-	.main-footer{
-		text-align: center;
-	}
 
 }
