@@ -6,129 +6,30 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-//===============================================================================
-// GRID
-//===============================================================================
-* {
-	margin: 0;
-	padding: 0;
-	position: relative;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.container {
-	max-width: 860px;
-	margin: 0 auto;
-	padding: 0 30px;
-	padding: 0 1.5rem;
-}
-.grid {
-	margin-left: -3%;
-	max-width: 105%;
-}
-.unit {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
-	vertical-align: top;
-	margin-left: 3%;
-	margin-right: -.25em;
-	overflow: hidden;
-	*overflow: visible;
+// ANIMATIONS: keyframes and animations
+@import "_animations";
 
-	&.span-grid {width: 97%;}
+// ELEMENTS: styles for standard html elements
+@import "_elements";
 
-	&.one-of-two {width: 47%;}
+// HELPERS: helper classes. clear-fix etc 
+@import "_helpers";
 
-	&.one-of-three {width: 30.36%;}
-	&.two-of-three {width: 63.666666666%;}
+// LAYOUT: grids, wraps etc
+@import "_layout";
 
-	&.one-of-four {width: 22.05%;}
-	&.three-of-four {width: 72%;}
+// TYPOGRAPHY:
+@import "_typography";
 
-	&.one-of-five {width: 17.07%;}
-	&.two-of-five {width: 37%;}
-	&.three-of-five {width: 57%;}
-	&.four-of-five {width: 77%;}
-}
+// GLOBAL-ELEMENTS: elements that are used on every page. Eg headers & footers
+@import "_header";
+@import "_footer";
 
-//===============================================================================
-// BASICS
-//===============================================================================
-*,
-*::before,
-*:after {
-	font-family: $sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    box-sizing: border-box;
-    position: relative;
-    padding: 0;
-    margin: 0;
-}
-body{
-	color: $black;
-	font-size: 1em;
-	font: 100%/1.5 $sans-serif;
-	background: $white;
-	font-weight: 400;
-}
+// PAGES: styles per page
+@import "_homepage";
 
-h1, h2, h3, h4, h5, h6 {
-	margin-top: 0;
-	margin-bottom: 10px;
-	line-height: 1.2;
-	font-weight: 600;
-}
-h1, .h1 {
-	font-size: 42px;
-}
-h2, .h2 {
-	font-size: 30px;
-}
-h3, .h3 {
-	font-size: 22px;
-}
-h4, .h4 {
-	font-size: 18px;
-}
-h5, .h5 {
-	margin-top: 20px;
-	font-size: 14px;
-}
-h6, .h6 {
-	margin-top: 20px;
-	font-size: 12px;
-}
-p {
-	margin-top: 0;
-	margin-bottom: 10px;
-	font-size: 16px;
-}
-ul {
-	padding: 0;
-	list-style: none;
-}
-a{
-	color: $yellow;
-	transition: all 0.2s ease-in-out;
+// BROWSER-FIXES: styles per page
+@import "_browser-fixes";
 
-	&:hover{
-		text-decoration: none;
-		cursor: pointer;
-	}
-}
-
-// FIXES
-.hide-text{
-	@include hide-text;
-}
-
-//===============================================================================
-// STYLES
-//===============================================================================
-
-
-// RESPONSIVE STYLES
-@import "_responsive.scss";
+// MEDIA-QUERIES:
+@import "_media-queries";

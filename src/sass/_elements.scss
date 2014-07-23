@@ -1,0 +1,244 @@
+//===============================================================================
+// ELEMENTS
+//===============================================================================
+*,
+*::before,
+*:after{
+  // use border-box box model everywhere
+  @include box-sizing(border-box);
+
+  // set thiner font rendering for webkit browsers
+  -webkit-font-smoothing: antialiased;
+  font-family: $body-font;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body{
+  background-color: $paper;
+  color: $ink; 
+  font-size: 18px;
+  font-family: $body-font;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+h1, h2, h3, h4, h5, h6,
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+button{
+  margin: 0 0 18px 0;
+}
+
+ol,{
+  padding-left: 1.4em;
+
+  ol,
+  ol ol{
+    margin-bottom: 0;
+  }
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+
+  ul,
+  ul ul{
+    margin-bottom: 0;
+  }
+}
+dt{
+  font-weight: bold;
+}
+
+dd{
+  margin-left: 1.4em;
+}
+img{
+  max-width: 100%;
+}
+a{
+  color: $pc-pink;
+  font-weight: 700;
+
+  &:hover,
+  &.hover{
+    color: darken($pc-pink, 15);
+  }
+
+  &:active,
+  &.active{
+    color: darken($pc-pink, 30);
+  }
+
+  // commented out for development
+  // &:visited,
+  &.visited{
+    color: lighten($pc-pink, 15);
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+blockquote{
+  margin: 0;
+  padding: 0 20px;
+  border-left: 2px solid $pc-pink;
+  font-style: italic;
+
+  p:before{
+    margin: 0 .2em 0 -.6em;
+    content: "“";
+  }
+
+  p:after{
+    content: "”";
+  }
+}
+
+pre{
+  @include border-radius(.2em);
+
+  padding: .85em 1.05em;
+  background-color: darken($ink, 20);
+  color: $paper;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p code,
+p samp{
+  @include border-radius(.2em);
+
+  padding: 0 .4em;
+  border: 1px solid darken($paper, 12.5);
+  background-color: darken($paper, 4);
+}
+
+hr{
+  margin: 2em 0;
+  border: 0;
+  border-top: 1px solid darken($paper, 10);
+}
+
+button,
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"]{
+  @include border-radius(2px);
+  
+  display: inline-block;
+  padding: 10px 14px;
+  text-transform: uppercase;
+  border: 0;
+  background-color: $pc-pink;
+  color: $paper;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1;
+
+  &:hover,
+  &.hover{
+    background-color: darken($pc-pink, 15);
+  }
+
+  &:active,
+  &.active{
+    background-color: darken($pc-pink, 30);
+  }
+
+  &.disabled{
+    background-color: darken($paper, 20);
+    cursor: default;
+  }
+}
+
+table{
+  width: 100%;
+  border: 1px solid $pc-pink;
+}
+
+thead{
+  text-align: left;
+}
+
+tr{
+  border-bottom: 1px solid darken($paper, 10);
+  border-left: 1px solid $pc-pink;
+  border-right: 1px solid $pc-pink;
+
+  &:nth-child(odd){
+    background-color: lighten($pc-pink, 35);
+  }
+
+  &:last-child{
+    border: 0;
+  }
+}
+
+th{
+  padding: 2px 8px;
+  background-color: $pc-pink;
+  color: $paper;
+}
+
+td{
+  border-right: 1px solid darken($paper, 10);
+  padding: 2px 8px;
+
+  &:last-child{
+    border: 0;
+  }
+}
+
+// Buttons
+.btn{
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 50px;
+  display: table;
+  text-decoration: none;
+  color: $ink;
+  background: $paper;
+
+  &:hover{
+    background: rgba(255,255,255,0.8);
+  }
+
+  &.btn-line{
+    border: 2px solid $paper;
+    color: $paper;
+    background: none;
+    
+    &:hover{
+      background: white;
+      color: $ink;
+    }
+  }
+
+}
+
+// Colours
+.pc-pink{
+  color: $pc-pink;
+  font-family: $callout-font;
+}
+.pc-blue{
+  color: $pc-blue;
+  font-family: $callout-font;
+}

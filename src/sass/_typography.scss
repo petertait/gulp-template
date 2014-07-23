@@ -1,0 +1,78 @@
+//===============================================================================
+// TYPOGRAPHY
+//===============================================================================
+h1, h2, h3, h4, h5, h6{
+  color: $header;
+}
+
+// font sizes
+.tera{
+  font-size: 76px;
+}
+
+.giga{
+  font-size: 60px;
+}
+
+.mega{
+  font-size: 42px;
+}
+
+.alpha{
+  font-size: 30px;
+}
+
+.beta{
+  font-size: 26px;
+}
+
+.gamma{
+  font-size: 22px;
+}
+
+.delta{
+  font-size: 18px;
+}
+
+.epsilon{
+  font-size: 16px;
+}
+
+.zeta{
+  font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+h1, .h1 {
+  font-size: 42px;
+}
+h2, .h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+h3, .h3 {
+  font-size: 22px;
+}
+h4, .h4 {
+  font-size: 18px;
+}
+h5, .h5 {
+  font-size: 14px;
+}
+h6, .h6 {
+  font-size: 12px;
+}
+
+.call-out{
+  font-family: $callout-font;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+

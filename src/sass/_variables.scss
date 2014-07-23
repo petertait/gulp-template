@@ -1,12 +1,26 @@
 // Colors
-$white: #fff;
-$black: #1f1f1f;
-$yellow: #fcc400;
-$red: #fa5a28;
-$blue: #25b8dc;
-$green: #82c828;
-$purple: #8750b9;
+$paper: white;
+$ink: #6B7482;
+$link: hsl(220,100,40);
+$header: $ink;
+
+$pc-pink:   hsl(342, 82, 62);
+$pc-purple: #9B5CA4;
+$pc-blue:   #3899E6;
+$pc-aqua:   #42B9BD;
+$pc-green:  #A4CE4E;
+$pc-orange: #FAAD40;
+$pc-grey: #3A5273;
+
+$code-head: hsl(215, 33, 34);
+$code-green: #37BEC0;
+
 
 // Text
-$sans-serif: "Proxima Nova Soft", "Avenir", "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$dark-text-shadow: 1px 2px 0 rgba(0,0,0,0.2);
+$body-font: "museo-sans", "museo sans", sans-serif;
+$callout-font: "brandon-grotesque", "brandon grotesque", sans-serif;
+
+// Layout
+$header-height-small: 40px;
+$header-height-large: 60px;
+$footer-height: 100px;

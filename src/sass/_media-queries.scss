@@ -1,0 +1,245 @@
+//===============================================================================
+// MEDIA-QUERIES
+//===============================================================================
+@media screen and (max-width: 1100px) {
+
+  
+ .intro-wrap{
+
+    & .team-block{
+
+      & .bubble{
+        font-size: 14px;
+
+        &.bubble-consultants{
+          padding-top: 110px;
+          width: 150px;
+          height: 150px;
+        }
+        &.bubble-designers{
+          padding-top: 110px;
+          width: 150px;
+          height: 150px;
+        }
+        &.bubble-engineers{
+          padding-top: 110px;
+          width: 150px;
+          height: 150px;
+        }
+        &.bubble-testers{
+          padding-top: 110px;
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+
+}
+//===============================================================================
+// iPAD STYLES
+//===============================================================================
+@media screen and (max-width: 1000px) {
+
+  // BASICS
+  .visible-tablet{
+    display: block!important;
+  }
+  .hidden-tablet{
+    display: none!important;
+  }
+  .hidden-desktop{
+    display: block!important;
+  }
+
+  
+
+}
+
+//===============================================================================
+// iPHONE STYLES
+//===============================================================================
+@media screen and (max-width: 650px) {
+
+  // GRID
+  html {
+    font-size: 0.875em;
+    -webkit-text-size-adjust:100%;
+  }
+  .grid {
+    margin-left: 0;
+    max-width: none;
+  }
+  .unit {
+    width: auto;
+    margin-left: 0;
+    display: block;
+  }
+  .hidden-phone{
+    display: none!important;
+  }
+  .hidden-desktop{
+    display: block!important;
+  }
+
+  // BASICS
+  body{
+    font-size: 0.875em;
+  }
+  h1, .h1 {
+    font-size: 36px; 
+  }
+  h2, .h2 {
+    font-size: 22px;
+  }
+  h3, .h3 {
+    font-size: 18px;
+  }
+  h4, .h4 {
+    font-size: 16px;
+  }
+  h5, .h5 {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  h6, .h6 {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+  } 
+
+  // .hero-wrap
+  .hero-wrap{
+    height: 300px;
+
+    & h1{
+      text-align: center;
+      color: white;
+      margin-top: 40px;
+      margin-bottom: 0;
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+      z-index: 2;
+    }
+    & img{
+      margin: 0 auto;
+      display: table;
+      width: 200px;
+      height: auto;
+      z-index: 2;
+    }
+  }
+  // /.hero-wrap
+
+  // .pebble-logos-wrap
+  .pebble-logos-wrap{
+
+    & a{
+      display: table;
+      margin: 10px auto;
+    }
+    & img{
+      height: 80px;
+      display: block;
+    }
+  }
+  // /.pebble-logos-wrap
+
+  // .intro-wrap
+  .intro-wrap{
+    padding: 0;
+    top: -70px; 
+
+    & .about-block{
+
+      & .call-out{
+        font-size: 38px;
+        padding: 0;
+        width: 100%;
+      }
+      & h2{
+        font-size: 20px;
+      }
+      & .team-block{
+        margin-bottom: 0;
+        display: none;
+
+        & .bubble{
+          display: table;
+          margin: 20px auto 0;
+        }
+      }
+    }
+  }
+  // /.intro-wrap
+
+  // .compare-wrap
+  .compare-wrap{
+    background: $pc-pink;
+    padding: 20px 0 40px;
+
+    &:before{
+      z-index: 2;
+      top: -100px;
+    }
+    & .container{
+      padding: 0;
+    }
+    & .features-block{
+      width: 100%;
+      padding: 120px 30px 40px;
+      padding: 120px 1.5rem 40px;
+
+      & .btn{
+        font-size: 14px;
+      }
+      &.features-code{
+        background-color: $pc-pink;
+        width: 100%;
+        background-size: auto 35px;
+      }
+      &.features-it{
+        background-color: $pc-blue;
+
+        &:before{
+          content:"";
+          z-index: 2;
+          width: 100%;
+          position: absolute;
+          top: -10px;
+          display: block;
+          height: 15px;
+          background: $pc-pink;
+          transform: rotate(-2deg) scale(1.2);
+        }
+      }
+      & .feature{
+        display: block;
+      }
+    }
+  }
+  // /.compare-wrap
+
+  // .logos-wrap
+  .logos-wrap{
+    padding: 0;
+
+    & li{
+      width: 100%!important;
+      display: block;
+
+      & img{
+        max-width: 75%;
+        margin: 10px auto;
+        display: table;
+        text-align: center;
+      }
+    }
+  }
+  // /.logos-wrap
+
+}

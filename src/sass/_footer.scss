@@ -1,0 +1,36 @@
+//===============================================================================
+// FOOTER 
+//===============================================================================
+.site-footer {
+  background: $paper;
+  border-top: 1px solid darken($paper, 3);
+  padding: 12px 22px;
+  height: $footer-height;
+  width: 100%;
+
+  a{
+    text-decoration: none;
+    font-weight: 300;
+    cursor: pointer;
+  }
+
+  ul {
+    margin: 0;
+  }
+}
+
+.contact-panel {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+  z-index: 4;
+  font-size: 38px;
+  @include vendor( transition, -prefix- transform .3s );
+
+  &.active {
+    @include vendor( transform, translateY( -100% ) );
+  }
+}
