@@ -1,85 +1,6 @@
 //===============================================================================
 // MIXINS
 //===============================================================================
-@mixin border-radius($radius) { 
-  -ms-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  border-radius: $radius;
-} 
-
-@mixin box-shadow($x: 0, $y: 0, $radius: .5em, $spread: 0, $color: hsla(0,0,0,0.5)) {
-  -o-box-shadow: $x $y $radius $spread $color; 
-  -ms-box-shadow: $x $y $radius $spread $color;
-  -moz-box-shadow: $x $y $radius $spread $color;
-  -webkit-box-shadow: $x $y $radius $spread $color;
-  box-shadow: $x $y $radius $spread $color; 
-}
-
-@mixin gradients($first, $second) {
-  background-color: $first;
-  background-image: -o-linear-gradient(top, $first 0%, $second 100%);
-  background-image: -ms-linear-gradient(top, $first 0%, $second 100%);
-  background-image: -moz-linear-gradient(top,  $first,  $second);
-  background-image: -webkit-gradient(linear, left top, left bottom, from($first), to($second));
-  background-image: linear-gradient(top, $first 0%, $second 100%);
-}
-
-@mixin box-sizing($type: border-box) {
-  box-sizing: $type; 
-  -o-box-sizing: $type; 
-  -ms-box-sizing: $type;
-  -moz-box-sizing: $type;
-  -webkit-box-sizing: $type;
-}
-
-@mixin vendor($name, $args...) {
-  $vendors: -webkit-, -ms-, -moz-, -o-;
-  $nextWithVendor: false;
-  $first: true;
-  $cleanValues: null;
-  $cleanName: $name;
-  // @if nth( $name, 1 ) == -prefix- {
-  //   $cleanName: nth( $name, 2 );
-  // }
- 
-  @each $vendor in $vendors {
-    $values: null;
- 
-    @each $arg in $args {
-      @if nth( $arg, 1 ) == -prefix- {
-        $subValues: null;
-        @each $subValue in $arg {
-          @if $subValue != -prefix- {
-            $subValues: append( $subValues, $subValue );
-          }
-        }
-        $values: append( $values, $vendor + $subValues, comma );
-        @if $first {
-          $cleanValues: append( $cleanValues, $subValues, comma );
-        }
-      }
-      @else {
-        $values: append( $values, $arg, comma );
-        @if $first {
-          $cleanValues: append( $cleanValues, $arg, comma );
-        }
-      }
-    }
-    $first: false;
- 
-    @if $cleanName == $name {
-      #{$vendor + $cleanName}: $values;
-    }
-    @else {
-      #{$cleanName}: $values;
-    }
-  }
-  
-  #{$cleanName}: $cleanValues;
-}
-
-
 // CLEAR FIX
 // @include clearfix;
 @mixin clearfix {
@@ -88,14 +9,6 @@
     display: table;
     clear: both;
   }
-}
-
-// APPEARANCE
-// @include apperance;
-@mixin appearance( $value: none ) {
-  -webkit-appearance: $value;
-     -moz-appearance: $value;
-          appearance: $value;
 }
 
 // HIDE TEXT

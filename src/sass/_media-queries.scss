@@ -5,9 +5,10 @@
 //===============================================================================
 // iPAD STYLES
 //===============================================================================
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
 
-  // BASICS
+  // BASE STYLES
+  // ===========================================================
   .visible-tablet{
     display: block!important;
   }
@@ -18,8 +19,6 @@
     display: block!important;
   }
 
-  
-
 }
 
 //===============================================================================
@@ -28,6 +27,7 @@
 @media screen and (max-width: 650px) {
 
   // GRID
+  // ===========================================================
   html {
     font-size: 0.875em;
     -webkit-text-size-adjust:100%;
@@ -48,34 +48,29 @@
     display: block!important;
   }
 
-  // BASICS
-  body{
-    font-size: 0.875em;
-  }
-  h1, .h1 {
+  // BASE STYLES
+  // ===========================================================
+  h1, .alpha {
     font-size: 36px; 
   }
-  h2, .h2 {
+  h2, .beta {
     font-size: 22px;
   }
-  h3, .h3 {
+  h3, .gamma {
     font-size: 18px;
   }
-  h4, .h4 {
+  h4, .delta {
     font-size: 16px;
   }
-  h5, .h5 {
-    margin-top: 20px;
+  h5, .epsilon {
     font-size: 14px;
   }
-  h6, .h6 {
-    margin-top: 20px;
+  h6, .zeta {
     font-size: 12px;
   }
   p {
     margin-top: 0;
     margin-bottom: 10px;
-    font-size: 16px;
   } 
 
 }

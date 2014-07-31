@@ -1,35 +1,47 @@
 //===============================================================================
 // IMPORTS
 //===============================================================================
-// normalize.css v3.0.0 | MIT License | git.io/normalize
-@import "_normalize.scss";
-@import "_mixins.scss";
+// FONTS: include font-face
+@import "_fonts.scss";
+
+// VARIABLES: define global variables
 @import "_variables.scss";
 
+// normalize.css v3.0.0 | MIT License | git.io/normalize
+@import "_normalize.scss";
+
+// MIXINS: define mixins & functions
+@import "_mixins.scss";
+
+// TYPOGRAPHY: base type styles
+@import "_typography.scss";
+
 // ANIMATIONS: keyframes and animations
-@import "_animations";
+@import "_animations.scss";
 
 // ELEMENTS: styles for standard html elements
-@import "_elements";
+@import "_elements.scss";
 
 // HELPERS: helper classes. clear-fix etc 
-@import "_helpers";
+@import "_helpers.scss";
 
 // LAYOUT: grids, wraps etc
-@import "_layout";
+@import "_layout.scss";
 
-// TYPOGRAPHY:
-@import "_typography";
+// button styling
+@import "_buttons.scss";
 
-// GLOBAL-ELEMENTS: elements that are used on every page. Eg headers & footers
-@import "_header";
-@import "_footer";
+// header styling
+@import "_header.scss";
 
-// PAGES: styles per page
-@import "_homepage";
+// footer styling
+@import "_footer.scss";
+
+// PAGE STYLINGS
+@import "_homepage.scss";
 
 // BROWSER-FIXES: styles per page
-@import "_browser-fixes";
+@import "_browser-fixes.scss";
 
 // MEDIA-QUERIES:
-@import "_media-queries";
+@import "_media-queries.scss";

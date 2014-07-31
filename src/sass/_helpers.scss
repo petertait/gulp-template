@@ -1,7 +1,7 @@
 //===============================================================================
 // HELPER-CLASSES
 //===============================================================================
-// add bullets to ul
+// Add bullets to ul
 .text-list{
   list-style: disc;
   padding-left: 1em;
@@ -14,10 +14,15 @@
   clear: both;
 }
 
+// Floats
 .left{
   float: left;
 }
-
 .right{
   float: right;
+}
+
+// No scroll on body
+.no-scroll{
+	overflow: hidden;
 }

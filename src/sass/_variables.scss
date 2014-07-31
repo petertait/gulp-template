@@ -1,11 +1,30 @@
-// Colors
-$paper: white;
-$ink: #6B7482;
+//===============================================================================
+// GLOBAL-VARIABLES
+//===============================================================================
 
-// Text
-$body-font: "museo-sans", "museo sans", sans-serif;
+// COLOURS
+//===============================================================================
+$paper: #ffffff;
+$ink: #484E59;
 
-// Layout
-$header-height-small: 40px;
-$header-height-large: 60px;
-$footer-height: 100px;
+$primary: #426fbd;
+
+// CUSTOM STYLES
+//===============================================================================
+$corner-radius: 2px;
+$box-shadow: 0 0 2px rgba(0,0,0,0.2);
+
+// TYPE
+//===============================================================================
+$base-font-size: 14px;
+$body-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$tera: 86px;
+$giga: 74px;
+$mega: 62px;
+$alpha: 50px;
+$beta: 38px;
+$gamma: 26px;
+$delta: 14px;
+$epsilon: 12px;
+$zeta: 9px;

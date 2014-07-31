@@ -2,25 +2,9 @@
 // HEADER
 //===============================================================================
 .site-header {
-  background: $paper;
-  width: 100%;
-  height: $header-height-small;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-left: 2px;
-  transition: height .15s;
-  z-index: 99999;
 
-  &::before{
-    content: '';
-    position: fixed;
-    top: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: top .15s;
-    background: fade-out(darken($pc-pink, 25), .70);
-  }
+}
+
+@media (max-width: 650px) {
+  
 }
