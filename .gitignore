@@ -1,0 +1,10 @@
+# MacOS
+.DS_Store
+
+# NPM files
+node_modules
+npm-debug.log
+
+# Built files
+.sass-cache
+/temp/
