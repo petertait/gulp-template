@@ -19,7 +19,7 @@ p, ul, ol, dl, blockquote, pre, button {
 
 // HEADINGS
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-weight: $body-weight;
+  font-weight: $bold;
 }
 
 h1, h2, h3, .h1, .h2, .h3 {
@@ -51,5 +51,5 @@ h6, .h6 {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: $bold;
 }

@@ -19,19 +19,14 @@ html {
   position: relative;
   margin: 0;
   padding: 0;
-  -webkit-overflow-scrolling: touch;
-
-  @media screen and (max-width: $medium) {
-    overflow: auto;
-  }
 }
 
 body {
   background-color: white;
-  font-weight: $body-weight;
-  line-height: 1.4;
-  color: white;
   font-size: $base-font-size;
+  font-weight: $regular;
+  line-height: 1.4;
+  color: $ink;
 }
 
 // GRID
