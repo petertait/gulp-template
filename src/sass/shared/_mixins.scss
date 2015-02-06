@@ -4,6 +4,8 @@
 // CLEAR FIX
 // @include clearfix;
 @mixin clearfix {
+  clear: both;
+
   &:after {
     content: "";
     display: table;

@@ -1,4 +1,4 @@
-# Website Template
+# Barebones Gulp Project
 
 Barebones gulp.js project. 
 
