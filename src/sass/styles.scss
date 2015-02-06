@@ -4,11 +4,11 @@
 
 // SHARED
 // ===================================================
-// NORMALIZE.CSS v3.0.0 | MIT License | git.io/normalize
-@import "shared/_normalize.scss";
-
 // VARIABLES: Colours, Type sizes etc.
 @import "shared/_variables.scss";
+
+// NORMALIZE.CSS v3.0.0 | MIT License | git.io/normalize
+@import "shared/_normalize.scss";
 
 // MIXINS: Fixes, Recurring blocks of styling etc.
 @import "shared/_mixins.scss";
