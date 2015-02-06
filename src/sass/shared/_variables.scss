@@ -1,12 +1,12 @@
 //===============================================================================
 // VARIABLES
 //===============================================================================
-// Colours
+// COLOURS
 $paper: white;
 $ink: #263238;
 $primary: $ink;
 
-// Typography
+// TYPOGRAPHY
 $base-font-size: 14px;
 $body-weight: 400;
 $roboto: 'Roboto', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; 
@@ -20,3 +20,10 @@ $gamma: 22px;
 $delta: 16px;
 $epsilon: 14px;
 $zeta: 12px;
+
+// SPACING: Grid, Viewports etc
+$large: 1000px;
+$medium: 650px;
+$small: 500px;
+
+$gutter: 20px;

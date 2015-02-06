@@ -35,12 +35,6 @@ body {
 }
 
 // GRID
-$large: 1000px;
-$medium: 650px;
-$small: 500px;
-
-$gutter: 20px;
-
 .grid {
   @include clearfix;
   margin: 0 auto;

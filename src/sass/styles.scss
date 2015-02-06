@@ -2,74 +2,33 @@
 // IMPORTS
 //===============================================================================
 
-// normalize.css v3.0.0 | MIT License | git.io/normalize
-@import "_normalize.scss";
+// SHARED
+// ===================================================
+// NORMALIZE.CSS v3.0.0 | MIT License | git.io/normalize
+@import "shared/_normalize.scss";
 
-// Global Variables: Colours, type sizes etc.
-@import "_global-variables.scss";
+// VARIABLES: Colours, Type sizes etc.
+@import "shared/_variables.scss";
 
-// Mixins: Fixes, recurring blocks of styling etc.
-@import "_mixins.scss";
+// MIXINS: Fixes, Recurring blocks of styling etc.
+@import "shared/_mixins.scss";
 
-// Fonts: @font-face
-@import "_fonts.scss";
+// FONTS: @font-face
+@import "shared/_fonts.scss";
 
-// Animations: CSS animations
-@import "_animations.scss";
+// ANIMATIONS: CSS Animations
+@import "shared/_animations.scss";
 
-
-// Shared components and styles
-//===============================================================================
-// Grid: Global grid styles and variables
-@import "shared/_global-grid.scss";
-
-// Layout: Global base layout
+// LAYOUT: Base layout, Grid
 @import "shared/_layout.scss";
 
-// Typography: Headings, hierachy etc.
+// TYPOGRAPHY: Headings, Hierarchy etc.
 @import "shared/_typography.scss";
 
-// Elements: Forms, buttons, lists etc.
+// ELEMENTS: Links, Buttons, Forms, Lists etc.
 @import "shared/_elements.scss";
 
-// Global Navigation: Sidebar visible globally
-@import "shared/_global-nav.scss";
-
-// Global Help: Help button and tour
-@import "shared/_global-help.scss";
-
-// Modules: base styles for all modules
-@import "shared/_modules.scss";
-
-
-// Page layouts
-//===============================================================================
-// Course: Styles for introducing/exiting courses
-@import "pages/_intro.scss";
-
-// Slides: Styles the slide deck containing course content
-@import "pages/_slides.scss";
-
-// Video: Styles didactic video pages
-@import "pages/_video.scss";
-
-
-// Mini Game Styles
-//===============================================================================
-// Games: base styles for all mini games
-@import "games/_games.scss";
-
-// Trial Ninja: Styles for the ninja game
-@import "games/_ninja.scss";
-
-// Flick: Styles for the flick game
-@import "games/_flick.scss";
-
-// Boxie: Styles for the boix game
-@import "games/_boxie.scss";
-
-// Stacker: Styles for the stacker game
-@import "games/_stacker.scss";
-
-// Cubix: Styles for the cubix game
-@import "games/_multi.scss";
+// PAGES
+// ===================================================
+// EXAMPLE: Replace this example file
+@import "pages/_example.scss";
