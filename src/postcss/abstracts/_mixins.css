@@ -1,0 +1,22 @@
+/* Clears floats */
+@define-mixin clearfix {
+  clear: both;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* Hides text (eg. for icons) */
+@define-mixin hide-text {
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+  }
+}

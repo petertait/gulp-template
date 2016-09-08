@@ -1,89 +1,76 @@
 "use strict";
 
-// Plugins
-var            gulp = require( 'gulp' ),
-            connect = require( 'connect' ),
-  connectLivereload = require( 'connect-livereload' ),
-     gulpLivereload = require( 'gulp-livereload' ),
-               sass = require( 'gulp-sass' ),
-             prefix = require( 'gulp-autoprefixer' ),
-             jshint = require( "gulp-jshint" ),
-            stylish = require( 'jshint-stylish' ),
-            svgmin = require( 'gulp-svgmin' ),
-           imagemin = require( 'gulp-imagemin' );
+var gulp = require('gulp'),
+    connect = require('connect'),
+    serveStatic = require('serve-static'),
+    connectLivereload = require('connect-livereload'),
+    gulpLivereload = require('gulp-livereload'),
+    postcss = require('gulp-postcss'),
+    reporter = require('postcss-reporter'),
+    stylelint = require('stylelint'),
+    cssnano = require('gulp-cssnano'),
+    jshint = require('gulp-jshint');
 
-// paths & files
 var path = {
-        src: 'src/',
-       html: 'src/**/*.html',
-         js: 'src/js/*.js',
-       sass: 'src/sass/**/*.scss',
-        css: 'src/css/',
-};
+       src: 'src/',
+      html: 'src/**/*.html',
+        js: 'src/js/*.js',
+   postcss: 'src/postcss/**/*.css',
+       css: 'src/',
+}
 
-// ports
-var localPort =  4000,
+var localPort = 5000,
        lrPort = 35729;
 
-// start local server
-gulp.task( 'server', function() {
+gulp.task('server', function(){
   var server = connect();
 
-  server.use( connectLivereload( { port: lrPort } ) );
-  server.use( connect.static( path.src ) );
-  server.listen( localPort );
+  server.use(connectLivereload({port: lrPort}));
+  server.use(serveStatic(path.src));
+  server.listen(localPort);
 
-  console.log( "\nlocal server running at http://localhost:" + localPort + "/\n" );
+  console.log("\nlocal server running at http://localhost:" + localPort + "/\n");
 });
 
-// jshint
-gulp.task( 'jshint', function() {
-  gulp.src( path.js )
-    .pipe( jshint() )
-    .pipe( jshint.reporter( stylish ) );
+gulp.task('styles', function(){
+  gulp.src('src/postcss/styles.css')
+    .pipe(postcss([
+      require('precss'),
+      require('autoprefixer'),
+      require('postcss-reporter')
+    ]))
+    .pipe(cssnano())
+    .pipe(gulp.dest(path.css))
+    .pipe(gulpLivereload());
 });
 
-// compile sass
-gulp.task( 'sass', function() {
-  gulp.src( path.sass )
-    .pipe( sass({
-      outputStyle: [ 'expanded' ],
-      sourceComments: 'normal',
-      errLogToConsole: true
-    }))
-    .pipe( prefix() )
-    .pipe( gulp.dest( path.css ) );
+gulp.task('stylelint', function() {
+  return gulp.src('src/**/*.scss')
+    .pipe(postcss([
+      stylelint({ /* options */ }),
+      reporter({ clearMessages: true })
+    ]));
 });
 
-// watch file
-gulp.task( 'watch', function(done) {
-  var lrServer = gulpLivereload();
-
-  gulp.watch( [ path.html, path.js, path.css + '/**/*.css' ] )
-    .on( 'change', function( file ) {
-      lrServer.changed( file.path );
-    });
-
-  gulp.watch( path.js, ['jshint'] );
-
-  gulp.watch( path.sass, ['sass'] );
+gulp.task('jshint', function(){
+  gulp.src(path.js)
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+    .pipe(gulpLivereload());
 });
 
-// svg minify
-gulp.task( 'minifySvg', function () {
-  gulp.src( src + 'img/*.svg' )
-    .pipe( svgmin() )
-    .pipe( gulp.dest( dist + '/img' ) )
-    .pipe( livereload( server ) );
+gulp.task('html', function(){
+  gulp.src(path.html)
+    .pipe(gulpLivereload());
 });
 
-// minify raster images
-gulp.task( 'minifyImg', function () {
-  gulp.src( [ src + 'img/*.png', src + 'img/*.gif', src + 'img/*.jpg' ] )
-    .pipe( imagemin() )
-    .pipe( gulp.dest( dist + '/img' ) )
-    .pipe( livereload( server ) );
+gulp.task('watch', function(){
+  gulp.watch(path.postcss, ['styles']);
+  gulp.watch(path.postcss, ['stylelint']);
+  gulp.watch(path.js, ['jshint']);
+  gulp.watch(path.html, ['html']);
+
+  gulpLivereload.listen();
 });
 
-// default task
-gulp.task( 'default', [ 'server', 'watch' ] );
+gulp.task('default', ['server', 'watch']);

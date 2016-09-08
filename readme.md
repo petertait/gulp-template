@@ -1,16 +1,8 @@
-# Barebones Gulp Project
+# Barebones gulp project
 
-Barebones gulp.js project. 
+Barebones gulp.js project. Gives you local server, liveReload, postcss, & jshint.
 
-### Includes
-* Local server
-* LiveReload
-* Sass
-* Jshint
-* CSS Grid
-* CSS Reset
-
-### Installation
+### getting started
 
 Install [node](http://nodejs.org/) & [gulp](http://gulpjs.com/)
 
@@ -19,10 +11,6 @@ Install [node](http://nodejs.org/) & [gulp](http://gulpjs.com/)
 Install packages
 
 `npm i`
-
-Build assets (only required once)
-
-`gulp build`
 
 Run Gulp
 
