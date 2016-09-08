@@ -1,11 +1,11 @@
 {
-  "name": "barebones-gulp-project",
+  "name": "gulp-starter",
   "version": "0.1.0",
-  "author": "pebble {code}",
+  "author": "Peter Tait",
   "description": "gulp, localhost, livereload, postcss, jshint",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pebblecode/pebble-gulp-base"
+    "url": "https://github.com/petertait/gulp-template"
   },
   "scripts": {
     "install": "gulp styles"
